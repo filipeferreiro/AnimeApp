@@ -4,40 +4,40 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:id="nav_home"
+        <item android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Página Inicial" />
+            android:title="@string/p_gina_inicial" />
 
-        <item android:id="nav_account"
+        <item android:id="@+id/nav_account"
             android:icon="@drawable/ic_account"
-            android:title="Conta" />
+            android:title="@string/conta" />
     </group>
 
-    <item android:title="Animes">
+    <item android:title="@string/animes">
         <menu>
-            <item android:id="nav_lista"
+            <item android:id="@+id/nav_lista"
                 android:icon="@drawable/ic_list"
-                android:title="Lista de Animes" />
+                android:title="@string/lista_de_animes" />
 
-            <item android:id="nav_fav"
+            <item android:id="@+id/nav_fav"
                 android:icon="@drawable/ic_favorites"
-                android:title="Favoritos" />
+                android:title="@string/favoritos" />
 
-            <item android:id="nav_his"
+            <item android:id="@+id/nav_his"
                 android:icon="@drawable/ic_history"
-                android:title="Histórico" />
+                android:title="@string/hist_rico" />
         </menu>
     </item>
 
-    <item android:title="Outros">
+    <item android:title="@string/outros">
         <menu>
-            <item android:id="nav_conf"
+            <item android:id="@+id/nav_conf"
                 android:icon="@drawable/ic_conf"
-                android:title="Configurações" />
+                android:title="@string/configura_es" />
 
-            <item android:id="nav_share"
+            <item android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
-                android:title="Compartilhe" />
+                android:title="@string/compartilhe" />
         </menu>
     </item>
 

@@ -5,4 +5,14 @@
     <string name="noticia">Noticia</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="p_gina_inicial">Página Inicial</string>
+    <string name="conta">Conta</string>
+    <string name="animes">Animes</string>
+    <string name="lista_de_animes">Lista de Animes</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="hist_rico">Histórico</string>
+    <string name="outros">Outros</string>
+    <string name="configura_es">Configurações</string>
+    <string name="compartilhe">Compartilhe</string>
+    <string name="imagem">Imagem</string>
 </resources>

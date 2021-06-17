@@ -11,6 +11,7 @@
     <ImageView
         android:layout_width="147dp"
         android:layout_height="77dp"
-        android:src="@drawable/logo_removebg_preview" />
+        android:src="@drawable/logo_removebg_preview"
+        android:contentDescription="@string/imagem" />
 
 </LinearLayout>
