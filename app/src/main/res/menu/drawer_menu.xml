@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Página Inicial" />
+
+        <item android:id="nav_account"
+            android:icon="@drawable/ic_account"
+            android:title="Conta" />
+    </group>
+
+    <item android:title="Animes">
+        <menu>
+            <item android:id="nav_lista"
+                android:icon="@drawable/ic_list"
+                android:title="Lista de Animes" />
+
+            <item android:id="nav_fav"
+                android:icon="@drawable/ic_favorites"
+                android:title="Favoritos" />
+
+            <item android:id="nav_his"
+                android:icon="@drawable/ic_history"
+                android:title="Histórico" />
+        </menu>
+    </item>
+
+    <item android:title="Outros">
+        <menu>
+            <item android:id="nav_conf"
+                android:icon="@drawable/ic_conf"
+                android:title="Configurações" />
+
+            <item android:id="nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Compartilhe" />
+        </menu>
+    </item>
+
+</menu>
