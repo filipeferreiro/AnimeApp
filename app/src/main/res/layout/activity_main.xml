@@ -15,25 +15,42 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#e4e4e4"
-            android:id="@+id/toolbar"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"
-            tools:targetApi="lollipop"/>
-            <!-- REVER ESSES CODIGOS ACIMA, LINHAS 24 E 25-->
+            tools:targetApi="lollipop">
+
+        </androidx.appcompat.widget.Toolbar>
+        <!-- REVER ESSES CODIGOS ACIMA, LINHAS 24 E 25-->
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/imagem_bokunohero"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/animes"
+                    android:src="@drawable/imagem_bokunohero" />
+
+                <ImageView
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="300dp"
+                    android:contentDescription="@string/animes"
+                    android:src="@drawable/Imagem_neverland" />
+            </RelativeLayout>
         </FrameLayout>
     </LinearLayout>
 
