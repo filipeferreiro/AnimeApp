@@ -30,27 +30,50 @@
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_height="match_parent"
+                android:orientation="vertical">
                 <ImageView
-                    android:layout_width="370dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="350dp"
+                    android:layout_height="210dp"
+                    android:layout_gravity="center"
                     android:contentDescription="@string/animes"
                     android:src="@drawable/imagem_bokunohero" />
 
-                <ImageView
-                    android:layout_width="370dp"
+                <TextView
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="300dp"
+                    android:text="@string/novos_epis_dios_de_boku_no_hero_academia"
+                    android:textSize="16sp"
+                    android:padding="10sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#714695"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:background="#e4e4e4"/>
+
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="175dp"
+                    android:layout_gravity="center_horizontal"
                     android:contentDescription="@string/animes"
-                    android:src="@drawable/Imagem_neverland" />
-            </RelativeLayout>
+                    android:src="@drawable/imagem_neverland" />
+
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ltimas_noticias_sobre_the_promised_neverland"
+                    android:textSize="16sp"
+                    android:padding="10sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#714695"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:background="#e4e4e4"/>
+            </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 
