@@ -69,8 +69,8 @@ public class ContaFragment extends Fragment {
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent); //change to registre-se
+                Intent intent = new Intent(getActivity(), RegistroActivity.class);
+                startActivity(intent);
             }
         });
     }
