@@ -28,11 +28,36 @@ public class ListaFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button botao_entrar = getView().findViewById(R.id.botao_enviar);
-
         ImageView img_bkh = getView().findViewById(R.id.img_bkh);
 
         img_bkh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView img_ds = getView().findViewById(R.id.img_ds);
+
+        img_ds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView img_op = getView().findViewById(R.id.img_op);
+
+        img_op.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView img_pnl = getView().findViewById(R.id.img_pnl);
+
+        img_pnl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show();
