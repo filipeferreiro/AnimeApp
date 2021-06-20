@@ -17,4 +17,9 @@
     <string name="imagem">Imagem</string>
     <string name="fa_a_o_login">Faça o Login</string>
     <string name="ltimas_noticias_sobre_the_promised_neverland">Últimas noticias sobre The Promised Neverland</string>
+    <string name="entrar">Entrar</string>
+    <string name="registre_se">Registre-se</string>
+    <string name="senha">Senha</string>
+    <string name="e_mail">E-mail</string>
+    <string name="foto_do_usu_rio">foto do usuário</string>
 </resources>
