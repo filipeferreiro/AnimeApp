@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
@@ -80,6 +81,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
+                break;
+
+            case R.id.nav_share:
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"Sharing URL");
+                intent.putExtra(Intent.EXTRA_TEXT, "www.basilides.com.br");
+                startActivity(Intent.createChooser(intent, "Share URL"));
+
+            case R.id.nav_lista:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ListaFragment()).commit();
                 break;
         }
 
