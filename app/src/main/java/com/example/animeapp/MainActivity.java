@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new HomeFragment()).commit();
                 break;
 
+            case R.id.nav_lista:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ListaFragment()).commit();
+                break;
+
             case R.id.nav_share:
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
@@ -90,10 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.putExtra(Intent.EXTRA_TEXT, "www.basilides.com.br");
                 startActivity(Intent.createChooser(intent, "Share URL"));
 
-            case R.id.nav_lista:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ListaFragment()).commit();
-                break;
+
         }
 
         drawer.closeDrawer(GravityCompat.START);

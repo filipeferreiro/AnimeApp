@@ -29,4 +29,13 @@
     <string name="registro">Registro</string>
     <string name="registro_de_usu_rio">Registro de usuário</string>
     <string name="share">Compartilhe o app</string>
+    <string name="boku_no_hero_academia">Boku no Hero Academia</string>
+    <string name="description_bokunohero">Em um mundo onde 80% da população possui algum tipo de habilidade especial, ser um herói é um sonho ambicioso que muitos compartilham. Porém, esse sonho é ainda mais difícil para Izuku, um garoto que quer se tornar o herói número 1 igual seu ídolo, All might, mas que teve o azar de nascer sem qualquer poder. Porém, isso não vai impedi-lo de se matricular em uma das academias de heróis mais prestigiadas do mundo.</string>
+    <string name="epis_dios">Episódios:</string>
+    <string name="temporada_1_13_epis_dios">Temporada 1: 13 episódios</string>
+    <string name="temporada_2_25_epis_dios">Temporada 2: 25 episódios</string>
+    <string name="temporada_3_25_epis_dios">Temporada 3: 25 episódios</string>
+    <string name="temporada_4_25_epis_dios">Temporada 4: 25 episódios</string>
+    <string name="temporada_5_12_epis_dios">Temporada 5: 12 episódios</string>
+    <string name="clique_aqui_para_assistir">Clique aqui para assistir</string>
 </resources>
