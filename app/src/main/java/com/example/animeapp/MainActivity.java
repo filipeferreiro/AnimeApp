@@ -9,14 +9,17 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.PersistableBundle;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 import android.widget.EditText;
@@ -24,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeFragment()).commit();
         navigationView.setCheckedItem(R.id.nav_home);}
+
     }
 
     @Override
@@ -92,9 +97,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_SUBJECT,"Sharing URL");
-                intent.putExtra(Intent.EXTRA_TEXT, "www.basilides.com.br");
+                intent.putExtra(Intent.EXTRA_TEXT, "Ainda não temos um website, mas você pode ver o site da nossa escola :) www.basilides.com.br");
                 startActivity(Intent.createChooser(intent, "Share URL"));
-
 
         }
 

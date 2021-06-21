@@ -22,7 +22,7 @@ public class RegistroActivity extends AppCompatActivity {
         toolbarReg.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegistroActivity.this, ContaFragment.class);
                 startActivity(intent);
                 finish();
             }
