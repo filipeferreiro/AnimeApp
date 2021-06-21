@@ -11,13 +11,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-public class Page_BokuNoHero extends AppCompatActivity {
+public class Page_OnePiece extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page_boku_no_hero);
+        setContentView(R.layout.activity_page_one_piece);
+
         Toolbar toolbarReg = (Toolbar) findViewById(R.id.toolbarReg);
 
         toolbarReg.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
@@ -25,17 +26,17 @@ public class Page_BokuNoHero extends AppCompatActivity {
         toolbarReg.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Page_BokuNoHero.this, ListaFragment.class);
+                Intent intent = new Intent(Page_OnePiece.this, ListaFragment.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        TextView textView = (TextView) findViewById(R.id.assistir_boku_no_hero);
+        TextView textView = (TextView) findViewById(R.id.assistir_onepiece);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("https://www.crunchyroll.com/pt-br/my-hero-academia");
+                Uri webpage = Uri.parse("https://www.crunchyroll.com/pt-br/one-piece/videos");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(webIntent);
                 finish();

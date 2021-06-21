@@ -10,12 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimeApp">
         <activity
+            android:name=".Page_OnePiece"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Page_DemonSlayer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Page_Neverland"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Page_BokuNoHero"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegistroActivity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

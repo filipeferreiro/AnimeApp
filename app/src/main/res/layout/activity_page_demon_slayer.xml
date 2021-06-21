@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page_DemonSlayer"
+    android:orientation="vertical"
+    android:background="#e4e4e4">
+
+    <Toolbar
+        android:id="@+id/toolbarReg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#e4e4e4"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imagem_ds"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/demon_slayer"
+                android:textSize="24sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#714695"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_ds"
+                android:textSize="16sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/epis_dios"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_1_26_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <!--tornar utilizavel-->
+            <TextView
+                android:id="@+id/assistir_demon_slayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clique_aqui_para_assistir"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="50sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="#552E77"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

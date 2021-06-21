@@ -43,7 +43,8 @@ public class ListaFragment extends Fragment{
         img_ds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show(); // replace
+                Intent intent = new Intent(getActivity(), Page_DemonSlayer.class);
+                startActivity(intent);
             }
         });
 
@@ -52,7 +53,8 @@ public class ListaFragment extends Fragment{
         img_op.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show(); // replace
+                Intent intent = new Intent(getActivity(), Page_OnePiece.class);
+                startActivity(intent);
             }
         });
 
@@ -61,7 +63,8 @@ public class ListaFragment extends Fragment{
         img_pnl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Funcionou", Snackbar.LENGTH_SHORT).show(); // replace
+                Intent intent = new Intent(getActivity(), Page_Neverland.class);
+                startActivity(intent);
             }
         });
 

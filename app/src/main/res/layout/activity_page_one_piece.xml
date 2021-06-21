@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page_OnePiece"
+    android:orientation="vertical"
+    android:background="#e4e4e4">
+
+    <Toolbar
+        android:id="@+id/toolbarReg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#e4e4e4"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imagem_onepiece"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/one_piece"
+                android:textSize="24sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#714695"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginTop="-20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_onepiece"
+                android:textSize="16sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/epis_dios"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_1_saga_east_blue_61_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_2_saga_alabasta_74_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_3_saga_skypiea_71_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_4_saga_walter_7_119_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_5_saga_thriller_bark_59_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_6_saga_guerra_de_marineford_132_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_7_saga_ilha_dos_homens_peixe_58_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_8_saga_alian_a_pirata_176_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_9_saga_yonkou_227_epis_dios_at_agora"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:textColor="#714695"
+                android:textStyle="bold"/>
+
+            <!--tornar utilizavel-->
+            <TextView
+                android:id="@+id/assistir_onepiece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clique_aqui_para_assistir"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="50sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="#552E77"
+                android:textStyle="bold"
+                android:clickable="true"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
