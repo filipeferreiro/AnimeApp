@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page_BokuNoHero"
+    tools:context=".Page_Neverland"
     android:orientation="vertical"
-    android:background="#e4e4e4">
+    android:background="@color/background">
 
     <Toolbar
         android:id="@+id/toolbarReg"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#e4e4e4"
+        android:background="@color/background"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:elevation="4dp"
@@ -39,7 +39,7 @@
                 android:textSize="24sp"
                 android:padding="10sp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#714695"
+                android:textColor="@color/text"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:layout_marginTop="-20sp"/>
@@ -51,7 +51,7 @@
                 android:textSize="16sp"
                 android:padding="10sp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#714695"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
 
             <TextView
@@ -61,7 +61,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginLeft="10sp"
-                android:textColor="#714695"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
 
             <TextView
@@ -70,7 +70,7 @@
                 android:text="@string/temporada_1_12_epis_dios"
                 android:textSize="16sp"
                 android:layout_marginLeft="10sp"
-                android:textColor="#714695"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
 
             <TextView
@@ -79,7 +79,7 @@
                 android:text="@string/temporada_2_11_epis_dios"
                 android:textSize="16sp"
                 android:layout_marginLeft="10sp"
-                android:textColor="#714695"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
 
             <!--tornar utilizavel-->
@@ -92,7 +92,7 @@
                 android:layout_marginTop="20sp"
                 android:layout_marginBottom="50sp"
                 android:layout_marginLeft="10sp"
-                android:textColor="#552E77"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>

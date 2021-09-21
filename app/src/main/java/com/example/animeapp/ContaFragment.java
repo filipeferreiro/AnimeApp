@@ -36,7 +36,7 @@ public class ContaFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
+        /* definição das variaveis */
         email = (EditText) getView().findViewById(R.id.email);
         senha = (EditText) getView().findViewById(R.id.senha);
         registrar = (TextView) getView().findViewById(R.id.registre);

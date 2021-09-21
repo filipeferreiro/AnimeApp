@@ -10,14 +10,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e4e4e4"
+        android:background="@color/background"
         android:orientation="vertical">
 
         <Toolbar
             android:id="@+id/toolbarReg"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#e4e4e4"
+            android:background="@color/background"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/registro_de_usu_rio"
             android:textSize="30sp"
-            android:textColor="#561C87"
+            android:textColor="@color/text"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"/>
@@ -85,7 +85,7 @@
             android:text="@string/registrar"
             android:textColor="#e4e4e4"
             android:textSize="24sp"
-            android:background="#561C87"
+            android:background="@color/text"
             android:layout_gravity="center_horizontal"
             android:padding="10sp"/>
     </LinearLayout>

@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Page_BokuNoHero"
     android:orientation="vertical"
-    android:background="#e4e4e4">
+    android:background="@color/background">
 
     <Toolbar
         android:id="@+id/toolbarReg"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#e4e4e4"
+        android:background="@color/background"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:elevation="4dp"
@@ -27,100 +27,100 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/imagem_bokunohero"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imagem_bokunohero"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/boku_no_hero_academia"
-            android:textSize="24sp"
-            android:padding="10sp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#714695"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:layout_marginTop="-20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boku_no_hero_academia"
+                android:textSize="24sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginTop="-20sp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/description_bokunohero"
-            android:textSize="16sp"
-            android:padding="10sp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_bokunohero"
+                android:textSize="16sp"
+                android:padding="10sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/epis_dios"
-        android:textSize="16sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="10sp"
-        android:textColor="#714695"
-        android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/epis_dios"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temporada_1_13_epis_dios"
-            android:textSize="16sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_1_13_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temporada_2_25_epis_dios"
-            android:textSize="16sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_2_25_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temporada_3_25_epis_dios"
-            android:textSize="16sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_3_25_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temporada_4_25_epis_dios"
-            android:textSize="16sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_4_25_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temporada_5_12_epis_dios"
-            android:textSize="16sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#714695"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temporada_5_12_epis_dios"
+                android:textSize="16sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
 
             <!--tornar utilizavel-->
-        <TextView
-            android:id="@+id/assistir_boku_no_hero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/clique_aqui_para_assistir"
-            android:textSize="16sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginBottom="50sp"
-            android:layout_marginLeft="10sp"
-            android:textColor="#552E77"
-            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/assistir_boku_no_hero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clique_aqui_para_assistir"
+                android:textSize="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="50sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -8,6 +8,6 @@
     <color name="black">#424242</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="background">#e4e4e4</color>
-    <color name="text">#714695</color>
+    <color name="background">#424242</color>
+    <color name="text">#b97bed</color>
 </resources>
