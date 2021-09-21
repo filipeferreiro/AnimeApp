@@ -2,6 +2,7 @@ package com.example.animeapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -12,8 +13,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.SearchManager;
 import android.app.Service;
 import android.content.ActivityNotFoundException;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -24,6 +27,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.PersistableBundle;
@@ -32,6 +36,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ActionMenuView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     private SensorEventListener sensorEventListenerLight;
     int REQUEST_LOCATION = 88;
+    private String mSearchQuery;
     /* Variaveis para a mudança de cor com sensor */
     SensorManager sensorManager;
     Sensor sensor;
@@ -68,6 +75,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
+
+        SearchManager searchManager =
+                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.search).getActionView();
+
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getComponentName()));
+
+        if (mSearchQuery != null) {
+            searchView.setIconified(true);
+            searchView.onActionViewExpanded();
+            searchView.setQuery(mSearchQuery, false);
+            searchView.setFocusable(true);
+        }
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                mSearchQuery = newText;
+                return false;
+            }
+
+        });
 
         MenuItem.OnActionExpandListener onActionExpandListener=new MenuItem.OnActionExpandListener() {
             @Override
@@ -83,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onCreateOptionsMenu(menu);
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,6 +177,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         };
 
         getLocation();
+
+        if(savedInstanceState != null){
+            mSearchQuery = savedInstanceState.getString("searchQuery");
+        }
     }
 
     @Override
@@ -253,5 +296,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onPause() {
         super.onPause();
         sensorManager.unregisterListener(sensorEventListenerLight);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("searchQuery", mSearchQuery);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("searchQuery",mSearchQuery);
     }
 }

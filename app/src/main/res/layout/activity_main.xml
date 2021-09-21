@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -87,7 +87,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:id="@+id/nav_view"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"/>
+        myapp:headerLayout="@layout/nav_header"
+        myapp:menu="@menu/drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
