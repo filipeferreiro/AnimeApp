@@ -33,6 +33,10 @@
                 android:icon="@drawable/ic_conf"
                 android:title="@string/configura_es" />
 
+            <item android:id="@+id/nav_loc"
+                android:icon="@drawable/ic_baseline_location"
+                android:title="@string/localiza" />
+
             <item android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
                 android:title="@string/compartilhe" />
