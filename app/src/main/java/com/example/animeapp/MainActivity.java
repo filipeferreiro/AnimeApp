@@ -64,7 +64,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
     private SensorEventListener sensorEventListenerLight;
-    int REQUEST_LOCATION = 88;
     private String mSearchQuery;
     /* Variaveis para a mudança de cor com sensor */
     SensorManager sensorManager;
@@ -176,8 +175,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         };
 
-        getLocation();
-
         if(savedInstanceState != null){
             mSearchQuery = savedInstanceState.getString("searchQuery");
         }
@@ -210,71 +207,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_loc:
-                if(ActivityCompat.checkSelfPermission(MainActivity.this,Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED){
-                    Location();
-                }else{
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},23);
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new  LocationFragment()).commit();
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private void getLocation() {
-        PermissionListener permissionlistener = new PermissionListener() {
-            @Override
-            public void onPermissionGranted() {
-                Toast.makeText(MainActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onPermissionDenied(List<String> deniedPermissions) {
-                Toast.makeText(MainActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-        };
-
-        TedPermission.create()
-                .setPermissionListener(permissionlistener)
-                .setDeniedMessage("If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
-                .setPermissions(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION)
-                .check();
-    }
-
-    private void Location() {
-        LocationRequest request = LocationRequest.create();
-        request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        request.setInterval(5000);
-        request.setFastestInterval(2000);
-
-        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder().addLocationRequest(request);
-        builder.setAlwaysShow(true);
-
-        Task<LocationSettingsResponse> result = LocationServices.getSettingsClient(getApplicationContext())
-                .checkLocationSettings(builder.build());
-        result.addOnCompleteListener(task -> {
-            try{
-                LocationSettingsResponse response = task.getResult(ApiException.class);
-                // FAZER A TAREFA COM A LOCALIZAÇÃO AQUI
-            } catch (ApiException e) {
-
-                switch (e.getStatusCode()){
-                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
-                        try{
-                            ResolvableApiException resolvableApiException = (ResolvableApiException)e;
-                            resolvableApiException.startResolutionForResult(MainActivity.this,REQUEST_LOCATION);
-                        } catch (IntentSender.SendIntentException sendIntentException){
-                        }
-                        break;
-                        // QUANDO O DISPOSITIVO NÂO TIVER LOCALIZAÇÃO
-                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                        break;
-                }
-
-            }
-        });
     }
 
     @Override
